@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>
+    .loaded {
+      opacity: 1;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231011165404">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231011165404">
+</head>
+
+  <body>
+    <header id="header">
+  <div class="container">
+    <div class="header">
+      <ul class="header__left">
+        <li>
+          <button class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+              <path d="M1 1.65747H23" stroke="#2C201D" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+              <path d="M1 1.65747H23" stroke="#2C201D" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+              <path d="M1 1.65747H23" stroke="#2C201D" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </li>
+        <li class="label-menu">Меню</li>
+        <li class="search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+            <path d="M21.6855 21.5L15.6855 15.5M3.68555 10.5C3.68555 11.4193 3.86661 12.3295 4.21839 13.1788C4.57017 14.0281 5.08579 14.7997 5.7358 15.4497C6.38581 16.0998 7.15748 16.6154 8.00676 16.9672C8.85604 17.3189 9.76629 17.5 10.6855 17.5C11.6048 17.5 12.5151 17.3189 13.3643 16.9672C14.2136 16.6154 14.9853 16.0998 15.6353 15.4497C16.2853 14.7997 16.8009 14.0281 17.1527 13.1788C17.5045 12.3295 17.6855 11.4193 17.6855 10.5C17.6855 9.58075 17.5045 8.6705 17.1527 7.82122C16.8009 6.97194 16.2853 6.20026 15.6353 5.55025C14.9853 4.90024 14.2136 4.38463 13.3643 4.03284C12.5151 3.68106 11.6048 3.5 10.6855 3.5C9.76629 3.5 8.85604 3.68106 8.00676 4.03284C7.15748 4.38463 6.38581 4.90024 5.7358 5.55025C5.08579 6.20026 4.57017 6.97194 4.21839 7.82122C3.86661 8.6705 3.68555 9.58075 3.68555 10.5Z" stroke="#2C201D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+      </ul>
+      <img class="header__logo" src="./images/logo.svg" alt="logo">
+      <ul class="header__right">
+        <li class="lang">
+          <div class="custom-select">
+            <div class="select-header">
+              <span id="selected-language">UA</span>
+              <svg id="select-arrow" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke="#2C201D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="select-options">
+              <li value="en">UA</li>
+              <li value="fr">EN</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+            <path d="M12.3984 2.5C6.87544 2.5 2.39844 6.977 2.39844 12.5C2.39844 18.023 6.87544 22.5 12.3984 22.5C17.9214 22.5 22.3984 18.023 22.3984 12.5C22.3984 6.977 17.9214 2.5 12.3984 2.5Z" stroke="#2C201D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.66992 18.846C4.66992 18.846 6.89892 16 12.3989 16C17.8989 16 20.1289 18.846 20.1289 18.846M12.3989 12.5C13.1946 12.5 13.9576 12.1839 14.5202 11.6213C15.0829 11.0587 15.3989 10.2956 15.3989 9.5C15.3989 8.70435 15.0829 7.94129 14.5202 7.37868C13.9576 6.81607 13.1946 6.5 12.3989 6.5C11.6033 6.5 10.8402 6.81607 10.2776 7.37868C9.71499 7.94129 9.39892 8.70435 9.39892 9.5C9.39892 10.2956 9.71499 11.0587 10.2776 11.6213C10.8402 12.1839 11.6033 12.5 12.3989 12.5Z" stroke="#2C201D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+            <path d="M15.6274 1.64258L19.056 7.64258M5.34172 7.64258L8.77029 1.64258M21.2503 7.64258H3.14743C2.89032 7.63737 2.63533 7.69008 2.40135 7.79679C2.16738 7.90351 1.9604 8.06149 1.79577 8.25905C1.63114 8.45661 1.51306 8.68868 1.45029 8.93806C1.38752 9.18745 1.38166 9.44776 1.43314 9.69972L3.31886 19.1283C3.399 19.5213 3.61444 19.8738 3.92767 20.1244C4.24091 20.375 4.63209 20.5078 5.03314 20.4997H19.3646C19.7656 20.5078 20.1568 20.375 20.47 20.1244C20.7833 19.8738 20.9987 19.5213 21.0789 19.1283L22.9646 9.69972C23.0161 9.44776 23.0102 9.18745 22.9474 8.93806C22.8847 8.68868 22.7666 8.45661 22.6019 8.25905C22.4373 8.06149 22.2303 7.90351 21.9964 7.79679C21.7624 7.69008 21.5074 7.63737 21.2503 7.64258Z" stroke="#2C201D" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="menu">
+  <div class="container">
+    <div class="navbar">
+      <ul class="list list__one">
+        <li><a href="products.html">Всі товари</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Новинки</a></li>
+        <li>
+          <p class="toggle-list">
+            Аромати для дому
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M8.16732 11.6667L14.0007 17.5L19.834 11.6667" stroke="#2C201D" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+          <ul class="dropdown-list">
+            <li><a href="#">Аромасаше</a></li>
+            <li><a href="#">Диффузори</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Спреї для текстилю</a></li>
+      </ul>
+      <ul class="list list__two">
+        <li>
+          <p class="toggle-list">
+            Догляд за тілом
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M8.16732 11.6667L14.0007 17.5L19.834 11.6667" stroke="#2C201D" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+          <ul class="dropdown-list">
+            <li><a href="#">Гель для душу</a></li>
+            <li><a href="#">Баттер для тіла</a></li>
+            <li><a href="#">Лосьйон для тіла</a></li>
+            <li><a href="#">Скраб</a></li>
+          </ul>
+        </li>
+        <li>
+          <p class="toggle-list">
+            Догляд за обличчям
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M8.16732 11.6667L14.0007 17.5L19.834 11.6667" stroke="#2C201D" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+          <ul class="dropdown-list">
+            <li><a href="#">Патчі</a></li>
+            <li><a href="#">Бальзам для губ</a></li>
+          </ul>
+        </li>
+        <li>
+          <p class="toggle-list">
+            Догляд для рук
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M8.16732 11.6667L14.0007 17.5L19.834 11.6667" stroke="#2C201D" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+          <ul class="dropdown-list">
+            <li><a href="#">Мило для рук</a></li>
+            <li><a href="#">Крем для рук</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Соєві свічки</a></li>
+        <li><a href="#">Сіль для ванни</a></li>
+        <li><a href="#">Аромати для машини</a></li>
+      </ul>
+      <ul class="list list__three">
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Де нас знайти?</a></li>
+        <li><a href="#">Політика конфеденційності</a></li>
+        <li><a href="#">Публічна оферта</a></li>
+        <li><a href="#">Партнерам</a></li>
+        <li><a href="#">Доставка та Оплата</a></li>
+        <li><a href="#">Сертифікати</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  // Отримуємо посилання на кнопку бургер, меню та іконку закриття
+  const burgerButton = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const closeButton = document.querySelector('.close');
+
+  // Додаємо обробник події для кнопки бургер
+  burgerButton.addEventListener('click', () => {
+    // Перевіряємо, чи меню приховане (закрите)
+    const isMenuHidden = !menu.classList.contains('open');
+
+    // Якщо меню приховане, показуємо його, змінюємо іконку на кнопці бургера і закриваємо кнопку закриття
+    if (isMenuHidden) {
+      menu.classList.add('open');
+      // Змінюємо іконку на кнопці бургера
+      burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="35"
+        viewBox="0 0 34 35"
+        fill="none"
+      >
+        <path
+          d="M21.8041 24.4444L16.8418 19.4821L11.8795 24.4443C11.6163 24.7076 11.2593 24.8554 10.8871 24.8554C10.5148 24.8554 10.1578 24.7076 9.89461 24.4443C9.63139 24.1811 9.48352 23.8241 9.48352 23.4519C9.48352 23.0797 9.63139 22.7227 9.89461 22.4594L14.8569 17.4972L9.89461 12.5349C9.63139 12.2717 9.48352 11.9147 9.48352 11.5424C9.48352 11.1702 9.63139 10.8132 9.89461 10.55C10.1578 10.2868 10.5148 10.1389 10.8871 10.1389C11.2593 10.1389 11.6163 10.2868 11.8795 10.55L16.8418 15.5122L21.8041 10.55C22.0673 10.2868 22.4243 10.1389 22.7965 10.1389C23.1688 10.1389 23.5258 10.2868 23.789 10.55C24.0522 10.8132 24.2001 11.1702 24.2001 11.5424C24.2001 11.9147 24.0522 12.2717 23.789 12.5349L18.8267 17.4972L23.789 22.4594C24.0522 22.7227 24.2001 23.0797 24.2001 23.4519C24.2001 23.8241 24.0522 24.1811 23.789 24.4443C23.5258 24.7076 23.1688 24.8554 22.7965 24.8554C22.4243 24.8554 22.0673 24.7076 21.8041 24.4444Z"
+          fill="#2C201D"
+        />
+      </svg>
+    `;
+    } else {
+      // Якщо меню відкрите, закриваємо його та змінюємо іконку на кнопці бургера
+      menu.classList.remove('open');
+      // Змінюємо іконку на кнопці бургера
+      burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke="#2C201D"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke="#2C201D"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke="#2C201D"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    `;
+    }
+  });
+  // ====================================
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelect = document.querySelector('.custom-select');
+    const selectHeader = document.querySelector('.select-header');
+    const selectArrow = document.querySelector('#select-arrow');
+    const selectOptions = document.querySelector('.select-options');
+    const selectedLanguage = document.querySelector('#selected-language');
+
+    selectHeader.addEventListener('click', function () {
+      customSelect.classList.toggle('active');
+      selectArrow.style.transform = customSelect.classList.contains('active')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+    });
+
+    selectOptions.addEventListener('click', function (e) {
+      if (e.target.tagName === 'LI') {
+        selectedLanguage.textContent = e.target.textContent;
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+        // Опціонально: Оновити значення селекта
+        document.querySelector('#language').value =
+          e.target.getAttribute('value');
+      }
+    });
+
+    // Додати обробник подій для закриття селектора при кліку в інше місце екрану
+    document.addEventListener('click', function (e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  // ======================================
+
+  // Отримуємо всі кнопки для відкриття списків та списки
+  const toggleLists = document.querySelectorAll('.toggle-list');
+  const dropdownLists = document.querySelectorAll('.dropdown-list');
+
+  // Додаємо обробник події для кожної кнопки
+  toggleLists.forEach((toggleList, index) => {
+    toggleList.addEventListener('click', () => {
+      // Перевіряємо, чи список прихований (закритий)
+      const isListHidden =
+        getComputedStyle(dropdownLists[index]).display === 'none';
+
+      // Змінюємо видимість списку
+      if (isListHidden) {
+        dropdownLists[index].style.display = 'flex';
+        toggleList.classList.add('active'); // Додайте клас "active" для зміни іконки
+      } else {
+        dropdownLists[index].style.display = 'none';
+        toggleList.classList.remove('active'); // Видаліть клас "active" для зміни іконки
+      }
+    });
+  });
+</script>
+
+    <main>
+      <div id="hero">
+  <div class="container">
+    <div class="hero">
+      <h1 class="hero__title">
+        Натуральна косметика <br>
+        з любов'ю у складі
+      </h1>
+      <p class="hero__text">
+        100% екологічна косметика ручної роботи для всіх типів шкіри. Створено
+        природою та серцем.
+      </p>
+      <button class="button" id="openPopupButton" type="button">
+        Замовити
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="myPopup">
+  <div class="popup-content">
+    <button class="close-button" id="closePopupButton" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+        <path d="M33.1057 14.5413L25.1507 22.4962L33.1057 30.4512L30.454 33.1028L22.4991 25.1479L14.5441 33.1028L11.8925 30.4512L19.8474 22.4962L11.8925 14.5413L14.5441 11.8896L22.4991 19.8446L30.454 11.8896L33.1057 14.5413Z" fill="#2C201D"/>
+      </svg>
+    </button>
+    <picture><source srcset="./images/popup.webp" type="image/webp"><img class="popup__img" src="./images/popup.png" alt=""></picture>
+    <div class="popup__content">
+      <h2 class="popup__title">Особлива пропозиція</h2>
+      <p class="popup__text">
+        Осіння колекція ароматів для дому від найкращих парфумерів світу.
+      </p>
+      <button class="button popup__btn">Переглянути</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupButton = document.getElementById('openPopupButton');
+  const popup = document.getElementById('myPopup');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupButton = document.getElementById('closePopupButton');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupButton.addEventListener('click', () => {
+    popup.style.display = 'block';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+ <div id="bestsellers">
+  <div class="container">
+    <ul class="bestsellers">
+      <li class="card"><h2 class="bestsellers__title">Bestsellers</h2></li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-1.webp" type="image/webp"><img src="./images/catalog-1.png" alt=""></picture>
+        <p>Спрей для текстилю з ароматом Франжипані</p>
+        <span>від 1700₴</span>
+      </li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-2.webp" type="image/webp"><img src="./images/catalog-2.png" alt=""></picture>
+        <p>Патчі під очі</p>
+        <span>700₴</span>
+      </li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-3.webp" type="image/webp"><img src="./images/catalog-3.png" alt=""></picture>
+        <p>Гель для душу Франжипані</p>
+        <span>450₴</span>
+      </li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-4.webp" type="image/webp"><img src="./images/catalog-4.png" alt=""></picture>
+        <p>Скраб для тіла Манго-Папайя</p>
+        <span>450₴</span>
+      </li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-5.webp" type="image/webp"><img src="./images/catalog-5.png" alt=""></picture>
+        <p>Лосьйон для тіла Абрикос</p>
+        <span>450₴</span>
+      </li>
+      <li class="card">
+        <picture><source srcset="./images/catalog-6.webp" type="image/webp"><img src="./images/catalog-6.png" alt=""></picture>
+        <p>Сіль для ванни Апельсин-Кориця</p>
+        <span>400₴</span>
+      </li>
+      <li class="card">
+        <a class="bestsellers__link" href="#">Дивитись всі</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div id="face">
+  <div class="container">
+    <div class="face">
+      <div class="face__content">
+        <div class="face__content__wrap">
+          <h2>Догляд за обличчям</h2>
+          <p>
+            Натуральні інгредієнти, найкращі олії та безкомпромісна якість
+            забезпечують вашій шкірі найкращий догляд.
+          </p>
+          <button class="face__btn" type="button">До категорії</button>
+        </div>
+      </div>
+      <div class="face__img">
+        <picture><source srcset="./images/face.webp" type="image/webp"><img src="./images/face.png" alt=""></picture>
+        <picture><source srcset="./images/face-mobile.webp" type="image/webp"><img src="./images/face-mobile.png" alt=""></picture>
+      </div>
+    </div>
+  </div>
+</div>
+ <div id="textile">
+  <div class="container">
+    <div class="textile">
+      <div class="textile__img">
+        <picture><source srcset="./images/textile.webp" type="image/webp"><img src="./images/textile.png" alt=""></picture>
+        <picture><source srcset="./images/textile-mobile.webp" type="image/webp"><img src="./images/textile-mobile.png" alt=""></picture>
+      </div>
+      <div class="textile__content">
+        <div class="textile__content__wrap">
+          <h2>Спреї для текстилю</h2>
+          <p>
+            Відкрийте ароматну магію і створюйте освіжаючу атмосферу вдома з
+            нашими ароматами.
+          </p>
+          <button class="textile__btn" type="button">До категорії</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="body">
+  <div class="container">
+    <div class="body">
+      <div class="body__content">
+        <div class="body__content__wrap">
+          <h2>Догляд за тілом</h2>
+          <p>
+            Натуральні інгредієнти, найкращі олії та безкомпромісна якість
+            забезпечують вашій шкірі найкращий догляд.
+          </p>
+          <button class="body__btn" type="button">До категорії</button>
+        </div>
+      </div>
+      <div class="body__img">
+        <picture><source srcset="./images/body.webp" type="image/webp"><img src="./images/body.png" alt=""></picture>
+        <picture><source srcset="./images/body-mobile.webp" type="image/webp"><img src="./images/body-mobile.png" alt=""></picture>
+      </div>
+    </div>
+  </div>
+</div>
+ <div id="ingredients">
+  <div class="container">
+    <div class="ingredients">
+      <div class="ingredients__title">
+        <h2>Інгредієнти</h2>
+        <p>Ми не використовуємо фарбники, сульфати та інші хімічні домішки.</p>
+      </div>
+      <div class="mySwiper swiper">
+        <div class="ingredients__list swiper-wrapper">
+          <div class="ingredients__card swiper-slide">
+            <picture><source srcset="./images/ingr-1.webp" type="image/webp"><img src="./images/ingr-1.png" alt=""></picture>
+            <p>Олія авокадо</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <picture><source srcset="./images/ingr-2.webp" type="image/webp"><img src="./images/ingr-2.png" alt=""></picture>
+            <p>Олія жожоба</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <picture><source srcset="./images/ingr-3.webp" type="image/webp"><img src="./images/ingr-3.png" alt=""></picture>
+            <p>Пелюстки календули</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <picture><source srcset="./images/ingr-4.webp" type="image/webp"><img src="./images/ingr-4.png" alt=""></picture>
+            <p>Олія естрагону</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231011165404"></script>
+
+
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1223: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>
+
+      <div id="packing">
+  <div class="container">
+    <div class="packing">
+      <div class="packing__img">
+        <picture><source srcset="./images/packing.webp" type="image/webp"><img src="./images/packing.png" alt=""></picture>
+        <picture><source srcset="./images/packing-mobile.webp" type="image/webp"><img src="./images/packing-mobile.png" alt=""></picture>
+      </div>
+      <div class="packing__content">
+        <div class="packing__content__wrap">
+          <h2>WOW Пакування</h2>
+          <p>
+            При купівлі будь-якої продукції BySadovkiy ви отримуєте фірмовий
+            подарунковий пакет і листівку, яку можна підписати за вашим
+            побажанням.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div id="about-us">
+  <div class="container">
+    <ul class="about-us">
+      <li class="about-us__item">
+        <img src="./images/about-1.svg" alt="">
+        <p>100% натуральний склад</p>
+      </li>
+      <li class="about-us__item">
+        <img src="./images/about-2.svg" alt="">
+        <p>Ручна робота всієї продукції</p>
+      </li>
+      <li class="about-us__item">
+        <img src="./images/about-3.svg" alt="">
+        <p>Wow пакування для кожного</p>
+      </li>
+      <li class="about-us__item">
+        <img src="./images/about-4.svg" alt="">
+        <p>Не тестуємо на тваринах</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </main>
+    <footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <img class="footer__logo" src="./images/logo-f.svg" alt="logo">
+      <ul class="list-one">
+        <li>магазин</li>
+        <li><a href="#">Всі товари</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Аромати для дому</a></li>
+        <li><a href="#">Спреї для текстилю</a></li>
+        <li><a href="#">Догляд за тілом</a></li>
+      </ul>
+      <ul class="list-two">
+        <li><a href="#">Догляд за обличчям</a></li>
+        <li><a href="#">Догляд для рук</a></li>
+        <li><a href="#">Соєві свічки</a></li>
+        <li><a href="#">Сіль для ванни</a></li>
+        <li><a href="#">Аромати для машини</a></li>
+      </ul>
+      <ul class="list-three">
+        <li>інфо</li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Де нас знайти?</a></li>
+        <li><a href="#">Політика конфеденційності</a></li>
+        <li><a href="#">Публічна оферта</a></li>
+        <li><a href="#">Доставка та Оплата</a></li>
+      </ul>
+      <ul class="list-four">
+        <li>контакти</li>
+        <li>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_178_876)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2 1.6C5.71479 1.6 4.29041 2.19 3.2402 3.2402C2.19 4.29041 1.6 5.71479 1.6 7.2V16.8C1.6 18.2852 2.19 19.7096 3.2402 20.7598C4.29041 21.81 5.71479 22.4 7.2 22.4H16.8C18.2852 22.4 19.7096 21.81 20.7598 20.7598C21.81 19.7096 22.4 18.2852 22.4 16.8V7.2C22.4 5.71479 21.81 4.29041 20.7598 3.2402C19.7096 2.19 18.2852 1.6 16.8 1.6H7.2ZM2.10883 2.10883C3.45909 0.758569 5.29044 0 7.2 0H16.8C18.7096 0 20.5409 0.758569 21.8912 2.10883C23.2414 3.45909 24 5.29044 24 7.2V16.8C24 18.7096 23.2414 20.5409 21.8912 21.8912C20.5409 23.2414 18.7096 24 16.8 24H7.2C5.29044 24 3.45909 23.2414 2.10883 21.8912C0.758569 20.5409 0 18.7096 0 16.8V7.2C0 5.29044 0.758569 3.45909 2.10883 2.10883ZM19.2 6.4H17.6V4.8H19.2V6.4ZM12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8ZM8.0402 8.0402C9.09041 6.99 10.5148 6.4 12 6.4C13.4852 6.4 14.9096 6.99 15.9598 8.0402C17.01 9.09041 17.6 10.5148 17.6 12C17.6 13.4852 17.01 14.9096 15.9598 15.9598C14.9096 17.01 13.4852 17.6 12 17.6C10.5148 17.6 9.09041 17.01 8.0402 15.9598C6.99 14.9096 6.4 13.4852 6.4 12C6.4 10.5148 6.99 9.09041 8.0402 8.0402Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_178_876">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            bysadovskiy</a>
+        </li>
+        <li>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_178_880)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.6C10.6343 1.6 9.28188 1.869 8.02009 2.39165C6.75831 2.9143 5.61182 3.68036 4.64609 4.64609C3.68036 5.61182 2.9143 6.75831 2.39165 8.02009C1.869 9.28188 1.6 10.6343 1.6 12C1.6 13.3657 1.869 14.7181 2.39165 15.9799C2.9143 17.2417 3.68036 18.3882 4.64609 19.3539C5.61182 20.3196 6.75831 21.0857 8.02009 21.6083C9.03486 22.0287 10.1082 22.285 11.2 22.3692V14.4H8V12.8H11.2V10.4C11.2 9.33913 11.6214 8.32172 12.3716 7.57157C13.1217 6.82143 14.1391 6.4 15.2 6.4H16V8H15.2C14.5635 8 13.953 8.25286 13.5029 8.70294C13.0529 9.15303 12.8 9.76348 12.8 10.4V12.8H16V14.4H12.8V22.3692C15.2656 22.1791 17.593 21.1148 19.3539 19.3539C21.3043 17.4035 22.4 14.7583 22.4 12C22.4 9.24175 21.3043 6.59647 19.3539 4.64609C17.4035 2.69571 14.7583 1.6 12 1.6ZM7.4078 0.913446C8.86371 0.310389 10.4241 0 12 0C15.1826 4.76837e-08 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C10.4241 24 8.86371 23.6896 7.4078 23.0866C5.95189 22.4835 4.62902 21.5996 3.51472 20.4853C2.40042 19.371 1.5165 18.0481 0.913446 16.5922C0.310389 15.1363 0 13.5759 0 12C0 10.4241 0.310389 8.86371 0.913446 7.4078C1.5165 5.95189 2.40042 4.62902 3.51472 3.51472C4.62902 2.40042 5.95189 1.5165 7.4078 0.913446Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_178_880">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            By Sadovskiy</a>
+        </li>
+        <li>Інтернет-магазин працює цілодобово</li>
+        <li>
+          Для оформлення замовлення та консультації: <br>
+          <a href="tel:+38(093) 742-71-97"> +38(093) 742-71-97</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-mobile">
+      <div class="footer-mobile__logo">
+        <img src="./images/logo-f.svg" alt="logo">
+      </div>
+      <ul class="list-mobile-one">
+        <li>контакти</li>
+        <li>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_178_876)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2 1.6C5.71479 1.6 4.29041 2.19 3.2402 3.2402C2.19 4.29041 1.6 5.71479 1.6 7.2V16.8C1.6 18.2852 2.19 19.7096 3.2402 20.7598C4.29041 21.81 5.71479 22.4 7.2 22.4H16.8C18.2852 22.4 19.7096 21.81 20.7598 20.7598C21.81 19.7096 22.4 18.2852 22.4 16.8V7.2C22.4 5.71479 21.81 4.29041 20.7598 3.2402C19.7096 2.19 18.2852 1.6 16.8 1.6H7.2ZM2.10883 2.10883C3.45909 0.758569 5.29044 0 7.2 0H16.8C18.7096 0 20.5409 0.758569 21.8912 2.10883C23.2414 3.45909 24 5.29044 24 7.2V16.8C24 18.7096 23.2414 20.5409 21.8912 21.8912C20.5409 23.2414 18.7096 24 16.8 24H7.2C5.29044 24 3.45909 23.2414 2.10883 21.8912C0.758569 20.5409 0 18.7096 0 16.8V7.2C0 5.29044 0.758569 3.45909 2.10883 2.10883ZM19.2 6.4H17.6V4.8H19.2V6.4ZM12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8ZM8.0402 8.0402C9.09041 6.99 10.5148 6.4 12 6.4C13.4852 6.4 14.9096 6.99 15.9598 8.0402C17.01 9.09041 17.6 10.5148 17.6 12C17.6 13.4852 17.01 14.9096 15.9598 15.9598C14.9096 17.01 13.4852 17.6 12 17.6C10.5148 17.6 9.09041 17.01 8.0402 15.9598C6.99 14.9096 6.4 13.4852 6.4 12C6.4 10.5148 6.99 9.09041 8.0402 8.0402Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_178_876">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            bysadovskiy</a>
+        </li>
+        <li>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_178_880)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.6C10.6343 1.6 9.28188 1.869 8.02009 2.39165C6.75831 2.9143 5.61182 3.68036 4.64609 4.64609C3.68036 5.61182 2.9143 6.75831 2.39165 8.02009C1.869 9.28188 1.6 10.6343 1.6 12C1.6 13.3657 1.869 14.7181 2.39165 15.9799C2.9143 17.2417 3.68036 18.3882 4.64609 19.3539C5.61182 20.3196 6.75831 21.0857 8.02009 21.6083C9.03486 22.0287 10.1082 22.285 11.2 22.3692V14.4H8V12.8H11.2V10.4C11.2 9.33913 11.6214 8.32172 12.3716 7.57157C13.1217 6.82143 14.1391 6.4 15.2 6.4H16V8H15.2C14.5635 8 13.953 8.25286 13.5029 8.70294C13.0529 9.15303 12.8 9.76348 12.8 10.4V12.8H16V14.4H12.8V22.3692C15.2656 22.1791 17.593 21.1148 19.3539 19.3539C21.3043 17.4035 22.4 14.7583 22.4 12C22.4 9.24175 21.3043 6.59647 19.3539 4.64609C17.4035 2.69571 14.7583 1.6 12 1.6ZM7.4078 0.913446C8.86371 0.310389 10.4241 0 12 0C15.1826 4.76837e-08 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C10.4241 24 8.86371 23.6896 7.4078 23.0866C5.95189 22.4835 4.62902 21.5996 3.51472 20.4853C2.40042 19.371 1.5165 18.0481 0.913446 16.5922C0.310389 15.1363 0 13.5759 0 12C0 10.4241 0.310389 8.86371 0.913446 7.4078C1.5165 5.95189 2.40042 4.62902 3.51472 3.51472C4.62902 2.40042 5.95189 1.5165 7.4078 0.913446Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_178_880">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            By Sadovskiy</a>
+        </li>
+        <li>Інтернет-магазин працює цілодобово</li>
+        <li>
+          Для оформлення замовлення та консультації: <br>
+          <a class="tel" href="tel:+38(093) 742-71-97"> +38(093) 742-71-97</a>
+        </li>
+      </ul>
+      <div class="list-mobile-wrap">
+        <ul class="list-mobile-two">
+          <li>магазин</li>
+          <li><a href="#">Всі товари</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Аромати для дому</a></li>
+          <li><a href="#">Спреї для текстилю</a></li>
+          <li><a href="#">Догляд за тілом</a></li>
+        </ul>
+        <ul class="list-mobile-three">
+          <li><a href="#">Догляд за обличчям</a></li>
+          <li><a href="#">Догляд для рук</a></li>
+          <li><a href="#">Соєві свічки</a></li>
+          <li><a href="#">Сіль для ванни</a></li>
+          <li><a href="#">Аромати для машини</a></li>
+        </ul>
+      </div>
+      <ul class="list-mobile-four">
+        <li>інфо</li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Де нас знайти?</a></li>
+        <li><a href="#">Політика конфеденційності</a></li>
+        <li><a href="#">Публічна оферта</a></li>
+        <li><a href="#">Доставка та Оплата</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="description">
+  <div class="container">
+    <div class="wrap-descr">
+      <p>© By Sadovskiy, 2023</p>
+      <ul class="descr-list">
+        <li><img src="./images/apple.svg" alt=""></li>
+        <li><img src="./images/google.svg" alt=""></li>
+        <li><img src="./images/mc.svg" alt=""></li>
+        <li><img src="./images/visa.svg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
+<script src="./index.js?_v=20231011165404" type="module"></script>
+<script src="./js/menu.js?_v=20231011165404" type="module"></script>
+<script src="./js/select-lang.js?_v=20231011165404" type="module"></script>
+<script src="./js/dropdown.js?_v=20231011165404" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231011165404"></script>
