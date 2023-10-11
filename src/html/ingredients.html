@@ -1,0 +1,53 @@
+<div id="ingredients">
+  <div class="container">
+    <div class="ingredients">
+      <div class="ingredients__title">
+        <h2>Інгредієнти</h2>
+        <p>Ми не використовуємо фарбники, сульфати та інші хімічні домішки.</p>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="ingredients__list swiper-wrapper">
+          <div class="ingredients__card swiper-slide">
+            <img src="./images/ingr-1.png" alt="" />
+            <p>Олія авокадо</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <img src="./images/ingr-2.png" alt="" />
+            <p>Олія жожоба</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <img src="./images/ingr-3.png" alt="" />
+            <p>Пелюстки календули</p>
+          </div>
+          <div class="ingredients__card swiper-slide">
+            <img src="./images/ingr-4.png" alt="" />
+            <p>Олія естрагону</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1223: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>

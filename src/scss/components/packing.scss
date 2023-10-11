@@ -1,0 +1,81 @@
+#packing {
+  background: $bg;
+}
+#packing .container {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+.packing {
+  @include flex(row, space-between, flex-end);
+
+  width: 100%;
+  &__content {
+    position: relative;
+    z-index: 10;
+    width: 50%;
+    padding: 50px;
+    @media (max-width: 991px) {
+      position: absolute;
+      max-width: 100%;
+      padding: 20px;
+    }
+    &__wrap {
+      width: 100%;
+      @media (max-width: 600px) {
+        width: 290px;
+      }
+    }
+    h2 {
+      font-family: $font-primary;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 130%;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #2c201d;
+      @media (max-width: 991px) {
+        color: $bg;
+        border-bottom: 1px solid $bg;
+      }
+      @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+      }
+    }
+    p {
+      font-family: $font-secondary;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 30px;
+      @media (max-width: 991px) {
+        color: $bg;
+      }
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__img {
+    width: 50%;
+    img:first-child {
+      display: block;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    img:last-child {
+      display: none;
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+}

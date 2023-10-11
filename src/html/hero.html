@@ -1,0 +1,70 @@
+<div id="hero">
+  <div class="container">
+    <div class="hero">
+      <h1 class="hero__title">
+        Натуральна косметика <br />
+        з любов'ю у складі
+      </h1>
+      <p class="hero__text">
+        100% екологічна косметика ручної роботи для всіх типів шкіри. Створено
+        природою та серцем.
+      </p>
+      <button class="button" id="openPopupButton" type="button">
+        Замовити
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="myPopup">
+  <div class="popup-content">
+    <button class="close-button" id="closePopupButton" type="button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="45"
+        height="45"
+        viewBox="0 0 45 45"
+        fill="none"
+      >
+        <path
+          d="M33.1057 14.5413L25.1507 22.4962L33.1057 30.4512L30.454 33.1028L22.4991 25.1479L14.5441 33.1028L11.8925 30.4512L19.8474 22.4962L11.8925 14.5413L14.5441 11.8896L22.4991 19.8446L30.454 11.8896L33.1057 14.5413Z"
+          fill="#2C201D"
+        />
+      </svg>
+    </button>
+    <img class="popup__img" src="./images/popup.png" alt="" />
+    <div class="popup__content">
+      <h2 class="popup__title">Особлива пропозиція</h2>
+      <p class="popup__text">
+        Осіння колекція ароматів для дому від найкращих парфумерів світу.
+      </p>
+      <button class="popup__btn button">Переглянути</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupButton = document.getElementById('openPopupButton');
+  const popup = document.getElementById('myPopup');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupButton = document.getElementById('closePopupButton');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupButton.addEventListener('click', () => {
+    popup.style.display = 'block';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+</script>

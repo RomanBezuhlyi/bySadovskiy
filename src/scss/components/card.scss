@@ -1,0 +1,765 @@
+#product {
+  margin-bottom: 84px;
+  border-bottom: 1px solid $stroke;
+  @media (max-width: 991px) {
+    border-bottom: none;
+    margin-bottom: 30px;
+  }
+}
+.product {
+  position: relative;
+  @include flex(row, space-between, flex-start);
+  @media (max-width: 991px) {
+    @include flex(column, center, center);
+  }
+
+  &__left {
+    width: 50%;
+    border-right: 1px solid $stroke;
+    padding: 16px 47px 78px 0;
+    @media (max-width: 991px) {
+      width: 100%;
+      border-right: none;
+      padding: 60px 0 0 0;
+    }
+    .breadcrumbs {
+      @include flex(row, flex-start, center);
+      gap: 10px;
+      margin-bottom: 63px;
+      @media (max-width: 991px) {
+        display: none;
+      }
+      span {
+        color: $text;
+        font-family: $font-secondary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+    .breadcrumbs-mobile {
+      display: none;
+      @media (max-width: 991px) {
+        @include flex(row, flex-start, center);
+        gap: 5px;
+        margin-top: 14px;
+      }
+      span {
+        font-size: 9px;
+      }
+      span:last-child {
+        color: $stroke;
+      }
+    }
+  }
+  &__right {
+    width: 50%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    &__top {
+      position: relative;
+      width: 649px;
+      margin: 55px 2px 20px 19px;
+      @media (max-width: 991px) {
+        width: 100%;
+        margin: 32px 0 20px 0;
+      }
+      .heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+      h3 {
+        color: $text;
+        font-family: $font-primary;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @media (max-width: 991px) {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
+      p {
+        width: 537px;
+        color: $text;
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        @media (max-width: 991px) {
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__selects {
+      padding: 17px 0 18px 20px;
+      border-top: 1px solid $stroke;
+      border-bottom: 1px solid $stroke;
+      @media (max-width: 991px) {
+        padding: 15px 0 15px 0;
+      }
+      p {
+        color: #000;
+        font-family: $font-secondary;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 10px;
+      }
+    }
+    .select-list {
+      @include flex(row, flex-start, center);
+      gap: 12px;
+    }
+
+    &__price {
+      @include flex(row, flex-start, center);
+      gap: 42px;
+      padding: 55px 20px 55px 20px;
+      border-bottom: 1px solid $stroke;
+      @media (max-width: 991px) {
+        @include flex(column, flex-start, flex-start);
+        gap: 20px;
+        padding: 20px 0 20px 0;
+      }
+      h3 {
+        color: $text;
+        font-family: $font-primary;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+          font-size: 30px;
+        }
+      }
+      .price-btn {
+        padding: 10px 40px;
+        width: 270px;
+        height: 56px;
+        font-size: 18px;
+        cursor: pointer;
+        @media (max-width: 991px) {
+          width: 100%;
+          font-size: 16px;
+          height: 44px;
+        }
+      }
+    }
+    &__instruction {
+      @include flex(row, space-between, center);
+      padding: 20px 0 20px 20px;
+      border-bottom: 1px solid $stroke;
+      @media (max-width: 991px) {
+        padding-left: 0;
+      }
+      p {
+        color: $text;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+    }
+    &__storage {
+      @include flex(row, space-between, center);
+      padding: 20px 0 20px 20px;
+      border-bottom: 1px solid $stroke;
+      @media (max-width: 991px) {
+        padding-left: 0;
+      }
+      p {
+        color: $text;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+    }
+    &__reviews {
+      @include flex(row, space-between, center);
+      padding: 20px 0 20px 20px;
+      @media (max-width: 991px) {
+        padding-left: 0;
+        border-bottom: 1px solid $stroke;
+      }
+      p {
+        color: $text;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.buttons-slider {
+  @include flex(row, space-between, center);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 100px;
+  z-index: 5;
+  width: 100%;
+}
+
+.heart-mobile {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 4;
+  @media (max-width: 991px) {
+    display: block;
+  }
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-desc {
+  display: block;
+  margin: auto;
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.img-mob {
+  display: none;
+  margin: auto;
+  @media (max-width: 991px) {
+    display: block;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  &::after {
+    display: none;
+  }
+}
+.custom-radio {
+  @include flex(row, flex-start, center);
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  color: $text;
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.custom-radio input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid $text;
+  border-radius: 50%;
+}
+
+.custom-radio input[type='radio']:checked + .radio-circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: $text;
+  border-radius: 50%;
+  display: block;
+}
+
+.products {
+  margin-top: 120px;
+  margin-bottom: 84px;
+  .container {
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include flex(row, space-between, center);
+    margin-bottom: 30px;
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    h3 {
+      color: $text;
+      font-family: $font-primary;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 130%;
+      text-transform: uppercase;
+      @media (max-width: 991px) {
+        font-size: 20px;
+        width: 187px;
+      }
+    }
+    .nav {
+      display: none;
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.products__list {
+  @include flex(row, flex-start, flex-start);
+
+  &__card {
+    position: relative;
+    @include flex(column, flex-end, center);
+    text-align: center;
+    width: calc(100% / 4);
+    height: 454px;
+    border: 1px solid $stroke;
+    padding: 10px 10px 20px 10px;
+    @include transition;
+    overflow: hidden;
+    cursor: pointer;
+    @media (max-width: 991px) {
+      width: calc(100% / 3);
+      height: 257px;
+      padding: 10px;
+    }
+    @media (max-width: 768px) {
+      width: calc(100% / 2);
+    }
+    &:hover .like {
+      opacity: 1;
+    }
+    &:hover p {
+      opacity: 0;
+    }
+    &:hover span {
+      opacity: 0;
+    }
+    &:hover .card__btn {
+      bottom: 20px;
+    }
+    .like {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0;
+      @include transition;
+    }
+    img {
+      margin-bottom: 10px;
+      width: 300px;
+      height: 300px;
+      @include transition;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 170px;
+        margin-bottom: 2px;
+      }
+    }
+    p {
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 130%;
+      width: 263px;
+      height: 42px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #aba19d;
+      margin-bottom: 12px;
+      @include transition;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 30px;
+        font-family: $font-secondary;
+        line-height: 116%;
+        font-size: 13px;
+        font-weight: 400;
+        padding-bottom: 40px;
+        margin-bottom: 10px;
+      }
+    }
+    span {
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 130%;
+      @include transition;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        font-family: $font-secondary;
+        font-weight: 400;
+      }
+    }
+    .card__btn {
+      width: 270px;
+      height: 56px;
+      font-size: 18px !important;
+      font-family: $font-secondary;
+      padding: 0;
+      position: absolute;
+      bottom: -70px;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 28px;
+        font-size: 12px !important;
+        text-transform: capitalize;
+      }
+    }
+    .sold {
+      background-color: $stroke;
+    }
+  }
+}
+
+.popup-basket {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(44, 32, 29, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.popup-basket-content {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $bg;
+  border-top: 1px solid $stroke;
+  border-bottom: 1px solid $stroke;
+  border-left: 1px solid $stroke;
+  width: 719px;
+  height: 100%;
+  padding: 30px 30px 50px 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+  }
+}
+.basket-top {
+  @include flex(row, space-between, center);
+  margin-bottom: 47px;
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-family: $font-primary;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 130%;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .reset {
+    @include flex(row, flex-end, center);
+    gap: 50px;
+    &-button {
+      color: $stroke;
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.basket__list {
+  @include flex(column, center, center);
+  width: 100%;
+}
+.basket__item {
+  position: relative;
+  width: 100%;
+  @include flex(row, flex-start, center);
+  gap: 50px;
+  border-bottom: 1px solid $stroke;
+  padding: 20px 0;
+  .delete {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    color: $stroke;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  .info {
+    width: 100%;
+  }
+  .info__top {
+    @include flex(row, space-between, center);
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      @include flex(column, flex-start, flex-start);
+      margin-bottom: 5px;
+    }
+    &__left {
+      p {
+        font-family: $font-primary;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 130%;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      span {
+        color: $stroke;
+        font-family: $font-primary;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 130%;
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
+      }
+    }
+    &__right {
+      @include flex(row, center, center);
+      gap: 15px;
+      @media (max-width: 768px) {
+        gap: 10px;
+      }
+      span {
+        color: #2c201d;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.info__bottom {
+  p {
+    color: #2c201d;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+.basket__plus {
+  padding-top: 31px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid $stroke;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+.basket-select {
+  margin-bottom: 20px;
+  @include flex(row, flex-start, center);
+  .custom-radio {
+    color: #2c201d;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+    span {
+      top: 5px;
+      @media (max-width: 768px) {
+        top: 0;
+      }
+    }
+  }
+}
+.basket__textarea {
+  border: 1px solid var(--stroke, #aba19d);
+  width: 416px;
+  height: 86px;
+  padding: 10px;
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  resize: none;
+  @media (max-width: 768px) {
+    width: 335px;
+  }
+}
+.basket__total {
+  padding-top: 24px;
+  @media (max-width: 768px) {
+    padding-top: 15px;
+  }
+  &-info {
+    @include flex(row, space-between, flex-start);
+    .left {
+      @include flex(column, flex-start, flex-start);
+      gap: 17px;
+      @media (max-width: 768px) {
+        gap: 11px;
+      }
+      p:first-child {
+        color: #2c201d;
+        font-family: $font-primary;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 130%;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      p:last-child {
+        color: #2c201d;
+        font-family: $font-secondary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .right {
+      p {
+        color: #2c201d;
+        font-family: $font-secondary;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 150%;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.basket__btn {
+  width: 100%;
+  @include flex(column, center, center);
+  margin-top: 50px;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+  .button {
+    font-size: 24px;
+    padding: 0;
+    width: 353px;
+    height: 56px;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      width: 335px;
+      height: 44px;
+      margin-bottom: 15px;
+    }
+  }
+  a {
+    color: #2c201d;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration-line: underline;
+  }
+}
+.basket__plug {
+  @include flex(column, center, center);
+  display: none;
+  border-top: 1px solid $stroke;
+  padding-top: 24px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+
+  p {
+    color: #2c201d;
+    font-family: $font-primary;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+  a {
+    color: #2c201d;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration-line: underline;
+  }
+}

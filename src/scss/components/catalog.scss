@@ -1,0 +1,494 @@
+.top {
+  position: relative;
+  @include flex(row, center, center);
+  img {
+    width: 100%;
+    &:nth-child(1) {
+      display: block;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    color: $bg;
+    font-family: $font-primary;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 130%;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.topbar {
+  position: relative;
+  margin-top: 30px;
+  @media (max-width: 768px) {
+    margin-top: 42px;
+  }
+  @include flex(row, space-between, center);
+  &__left {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+    @media (max-width: 768px) {
+      gap: 5px;
+    }
+    span,
+    a {
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+    span {
+      @media (max-width: 768px) {
+        color: $stroke;
+      }
+    }
+  }
+
+  &__right {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+    @media (max-width: 768px) {
+      gap: 5px;
+    }
+    .sort {
+      @include flex(row, flex-start, center);
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .filter {
+      @include flex(row, flex-start, center);
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.sort-list {
+  display: none;
+  position: absolute;
+  top: 58px;
+  right: 0;
+  width: 335px;
+  height: 275px;
+  padding: 30px 50px 30px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  border: 1px solid $stroke;
+  background: #fff;
+  z-index: 10;
+  @media (max-width: 768px) {
+    top: 30px;
+    right: -20px;
+    width: 184px;
+    height: 150px;
+    padding: 15px 50px 15px 15px;
+    gap: 10px;
+  }
+  .link {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  .active-link {
+    text-decoration-line: underline;
+  }
+}
+
+.active-sort {
+  display: flex;
+}
+
+.catalog {
+  margin-top: 30px;
+  margin-bottom: 120px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  @include flex(row, flex-start, flex-start);
+  flex-wrap: wrap;
+  &__card {
+    position: relative;
+    @include flex(column, flex-end, center);
+    text-align: center;
+    width: calc(100% / 4);
+    height: 454px;
+    padding: 10px 10px 20px 10px;
+    @include transition;
+    overflow: hidden;
+    cursor: pointer;
+    border-right: 1px solid $stroke;
+    border-bottom: 1px solid $stroke;
+    @media (max-width: 991px) {
+      border-right: none;
+    }
+    &:nth-child(odd) {
+      @media (max-width: 991px) {
+        border-right: 1px solid $stroke;
+      }
+    }
+    &:nth-child(-n + 4) {
+      border-top: 1px solid $stroke;
+      @media (max-width: 991px) {
+        border-top: none;
+      }
+    }
+    &:nth-child(4n + 1) {
+      border-left: 1px solid $stroke;
+      @media (max-width: 991px) {
+        border-left: none;
+      }
+    }
+    @media (max-width: 991px) {
+      width: calc(100% / 2);
+      height: 257px;
+      padding: 10px;
+    }
+    &:hover .like {
+      opacity: 1;
+    }
+    &:hover p {
+      opacity: 0;
+    }
+    &:hover span {
+      opacity: 0;
+    }
+    &:hover .card__btn {
+      bottom: 20px;
+    }
+    .bestseller {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 130%;
+      border: 1px solid $text;
+      padding: 5px;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        padding: 3px;
+      }
+    }
+    .new {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 130%;
+      border: 1px solid $text;
+      padding: 5px;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        padding: 3px;
+      }
+    }
+    .like {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0;
+      @include transition;
+    }
+    img {
+      margin-bottom: 10px;
+      width: 300px;
+      height: 300px;
+      @include transition;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 170px;
+        margin-bottom: 2px;
+      }
+    }
+    p {
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 130%;
+      width: 263px;
+      height: 42px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #aba19d;
+      margin-bottom: 12px;
+      @include transition;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 30px;
+        font-family: $font-secondary;
+        line-height: 116%;
+        font-size: 13px;
+        font-weight: 400;
+        padding-bottom: 40px;
+        margin-bottom: 10px;
+      }
+    }
+    span {
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 130%;
+      @include transition;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        font-family: $font-secondary;
+        font-weight: 400;
+      }
+    }
+    .card__btn {
+      width: 270px;
+      height: 56px;
+      font-size: 18px !important;
+      font-family: $font-secondary;
+      padding: 0;
+      position: absolute;
+      bottom: -70px;
+      @media (max-width: 768px) {
+        width: 167px;
+        height: 28px;
+        font-size: 12px !important;
+        text-transform: capitalize;
+      }
+    }
+    .sold {
+      background-color: $stroke;
+    }
+  }
+}
+
+.pagination-wrap {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+  p {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration-line: underline;
+    margin-bottom: 16px;
+  }
+}
+
+.pagination {
+  display: none;
+  @media (max-width: 768px) {
+    @include flex(row, center, center);
+    gap: 15px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    @include flex(row, center, center);
+  }
+  &__btn a {
+    @include flex(row, center, center);
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .active-btn {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.popup-filter {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(44, 32, 29, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.popup-filter-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $bg;
+  border-top: 1px solid $stroke;
+  border-bottom: 1px solid $stroke;
+  border-left: 1px solid $stroke;
+  width: 384px;
+  height: 100%;
+  padding: 100px 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    padding: 42px 20px;
+  }
+  h4 {
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .item {
+    padding: 15px 0px;
+    border-top: 1px solid $stroke;
+    &:last-child {
+      border-bottom: 1px solid $stroke;
+    }
+  }
+  .item-top {
+    @include flex(row, space-between, center);
+    p {
+      font-family: $font-secondary;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.sub-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    gap: 10px;
+  }
+  &-item {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  .price {
+    @include flex(row, space-between, center);
+    margin: auto;
+    width: 285.002px;
+    color: #2c201d;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: -10px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      margin-bottom: -5px;
+    }
+  }
+  .line {
+    margin: auto;
+    width: 285.002px;
+    height: 2px;
+    background: #2c201d;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: #2c201d;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: #2c201d;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.sub-menu-active {
+  display: flex;
+}
+
+.toggle-button .cross-icon svg {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.close-button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}

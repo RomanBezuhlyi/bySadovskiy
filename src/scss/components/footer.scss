@@ -1,0 +1,233 @@
+#footer {
+  background: $text;
+  color: $bg;
+}
+.footer {
+  @include flex(row, flex-start, flex-start);
+  padding: 50px 0 59px 0;
+  gap: 80px;
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.list-one {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  li > a {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.list-two {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  margin-top: 45px;
+  li > a {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.list-three {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  li > a {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.list-four {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  li:nth-child(2) a {
+    @include flex(row, flex-start, center);
+    gap: 15px;
+  }
+  li:nth-child(3) a {
+    @include flex(row, flex-start, center);
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  li:nth-child(4) {
+    margin-bottom: 15px;
+  }
+  li {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  li > a {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.footer-mobile {
+  display: none;
+  @media (max-width: 991px) {
+    @include flex(column, flex-start, flex-start);
+    padding: 30px 0;
+    gap: 30px;
+  }
+  &__logo {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aba19d;
+  }
+}
+.list-mobile-one {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  li:nth-child(2) a {
+    @include flex(row, flex-start, center);
+    gap: 15px;
+  }
+  li:nth-child(3) a {
+    @include flex(row, flex-start, center);
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  li:nth-child(4) {
+    margin-bottom: 15px;
+  }
+  li {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  li > a {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .tel {
+    font-size: 30px;
+    margin-top: 10px;
+    display: block;
+  }
+}
+
+.list-mobile-wrap {
+  @include flex(row, flex-start, center);
+  gap: 50px;
+}
+.list-mobile-two {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  li > a {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.list-mobile-three {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  margin-top: 5px;
+  li > a {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.list-mobile-four {
+  @include flex(column, flex-start, flex-start);
+  gap: 15px;
+  li:first-child {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  li > a {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.description {
+  background: #222;
+  padding: 15px 0 15px 0;
+  @media (max-width: 991px) {
+    @include flex(column-reverse, space-between, center);
+    gap: 20px;
+    padding: 30px 0 30px 0;
+  }
+}
+.wrap-descr {
+  @include flex(row, space-between, center);
+  @media (max-width: 991px) {
+    @include flex(column-reverse, space-between, center);
+    gap: 20px;
+  }
+  p {
+    color: $bg;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
+.descr-list {
+  @include flex(row, flex-start, center);
+  gap: 43px;
+}
