@@ -1,0 +1,36 @@
+#not-found {
+  padding: 150px 0;
+  @media (max-width: 480px) {
+    padding: 75px 0;
+  }
+}
+.not-found {
+  @include flex(column, center, center);
+  gap: 25px;
+  @media (max-width: 480px) {
+    gap: 15px;
+  }
+  h1 {
+    color: #2c201d;
+    font-family: $font-primary;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 130%;
+    text-transform: uppercase;
+    @media (max-width: 480px) {
+      font-size: 36px;
+    }
+  }
+  p {
+    color: #2c201d;
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 25px;
+    @media (max-width: 480px) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+}
