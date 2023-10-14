@@ -515,10 +515,8 @@ svg {
           transform: rotate(180deg);
 }
 
-.no-webp #hero{
-  background-image: url("../images/hero.png"); }
-
 #hero {
+  background-image: url("../images/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -3745,10 +3743,8 @@ svg {
     font-size: 12px;
   }
 
-  .no-webp #hero{
-    background-image: url("../images/hero-mobile.png"); }
-
   #hero {
+    background-image: url("../images/hero-mobile.png");
     background-position: bottom;
   }
 
@@ -5065,11 +5061,4 @@ svg {
     font-size: 16px;
     margin-bottom: 15px;
   }
-}
-
-.webp #hero{ background-image: url(../images/hero.webp); }
-
-@media (max-width: 991px){
-
-  .webp #hero{ background-image: url(../images/hero-mobile.webp); }
 }
