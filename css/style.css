@@ -1,18 +1,13 @@
 @charset "UTF-8";
 
-/* Змінні */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;
 
-/* Кольори */
+500&family=Mulish:wght@800&display=swap"); 
 
-/* Шрифти */
 
-/* Міксіни */
 
-/* Міксін для стилів флексбокса */
 
-/* Скидання стилів */
 
-/* Скидання маргінів та відступів */
 
 html,
 body,
@@ -5045,7 +5040,12 @@ svg {
 
 .webp #hero{ background-image: url(../../images/hero.webp); }
 
-@media (max-width: 991px){
+@media (max-width: 991px){ 
+
+
+
+
+
 
   .webp #hero{ background-image: url(../../images/hero-mobile.webp); }
 }
