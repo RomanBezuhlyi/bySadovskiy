@@ -12,6 +12,7 @@
   line-height: 120%;
   text-transform: uppercase;
   @include transition;
+  cursor: pointer;
   @media (max-width: 991px) {
     width: 278px;
     padding: 16.597px 33.194px;
