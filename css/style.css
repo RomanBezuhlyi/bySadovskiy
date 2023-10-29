@@ -3316,6 +3316,156 @@ svg {
   margin-bottom: 10px;
 }
 
+#register {
+  padding: 80px 0;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register__title {
+  color: #2c201d;
+  font-family: "Mulish", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.register__form {
+  width: 376px;
+}
+
+.register__input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.register__input:last-child {
+  margin-bottom: 30px;
+}
+
+.register__input label {
+  color: #aba19d;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 5px;
+}
+
+.register__input input {
+  color: #2c201d;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  width: 100%;
+  padding: 15px 10px;
+  height: 54px;
+  border: 1px solid #aba19d;
+}
+
+.register__input input:focus {
+  border: 1px solid #2c201d;
+}
+
+.register__input input:focus + label {
+  color: #2c201d;
+  /* Зміна кольору лейбла при фокусі на інпуті */
+}
+
+.register__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.register__checkbox input[type=checkbox] {
+  display: none;
+}
+
+.register__checkbox .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #2c201d;
+  background-color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.register__checkbox input[type=checkbox]:checked + .custom-checkbox {
+  background-color: #2c201d;
+  position: relative;
+}
+
+.register__checkbox input[type=checkbox]:checked + .custom-checkbox::after {
+  content: "✔";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.register__checkbox p {
+  width: 95%;
+  color: #2c201d;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.register__checkbox p > a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.register__btn {
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px 40px;
+}
+
 #footer {
   background: #2c201d;
   color: #ffffff;
@@ -5171,6 +5321,22 @@ svg {
   #blocks .container {
     padding: 0;
   }
+
+  #register {
+    padding: 50px 0;
+  }
+
+  .register__title {
+    font-size: 20px;
+  }
+
+  .register__checkbox p {
+    font-size: 14px;
+  }
+
+  .register__btn {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5226,6 +5392,10 @@ svg {
 @media (max-width: 480px) {
   #hero {
     background-position: top;
+  }
+
+  .register__form {
+    width: 100%;
   }
 
   #not-found {

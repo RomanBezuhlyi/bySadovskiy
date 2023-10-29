@@ -346,268 +346,73 @@
   });
 </script>
 
-    <main>
-      <div id="hero">
+    <main><div id="register">
   <div class="container">
-    <div class="hero">
-      <h1 class="hero__title">
-        Натуральна косметика <br>
-        з любов'ю у складі
-      </h1>
-      <p class="hero__text">
-        100% екологічна косметика ручної роботи для всіх типів шкіри. Створено
-        природою та серцем.
-      </p>
-      <button class="button" id="openPopupButton" type="button">
-        Замовити
-      </button>
+    <div class="register">
+      <h2 class="register__title">Реєстрація</h2>
+      <form class="register__form">
+        <div class="register__input">
+          <label for="first-name">Ім’я</label>
+          <input type="text" name="first-name" id="first-name" required>
+        </div>
+        <div class="register__input">
+          <label for="last-name">Прізвище</label>
+          <input type="text" name="last-name" id="last-name" required>
+        </div>
+        <div class="register__input">
+          <label for="date">Дата народження</label>
+          <input type="text" name="date" id="date" required>
+        </div>
+        <div class="register__input">
+          <label for="number">Номер телефону</label>
+          <input type="tel" name="number" id="number" required>
+        </div>
+        <div class="register__input">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="register__input">
+          <label for="password">Пароль</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox1">
+          <label for="myCheckbox1" class="custom-checkbox"></label>
+          <p>Отримувати листи про новини та знижки</p>
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox2">
+          <label for="myCheckbox2" class="custom-checkbox"></label>
+          <p>Погоджуюсь з правилами <a href="#">публічної оферти</a></p>
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox3">
+          <label for="myCheckbox3" class="custom-checkbox"></label>
+          <p>
+            Погоджуюсь з правилами <a href="#">політики конфіденційності</a>
+          </p>
+        </div>
+        <button class="button register__btn" type="button">Реєстрація</button>
+      </form>
     </div>
   </div>
 </div>
-
-<div class="popup" id="myPopup">
-  <div class="popup-content">
-    <button class="close-button" id="closePopupButton" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-        <path d="M33.1057 14.5413L25.1507 22.4962L33.1057 30.4512L30.454 33.1028L22.4991 25.1479L14.5441 33.1028L11.8925 30.4512L19.8474 22.4962L11.8925 14.5413L14.5441 11.8896L22.4991 19.8446L30.454 11.8896L33.1057 14.5413Z" fill="#2C201D"/>
-      </svg>
-    </button>
-    <img class="popup__img" src="./images/popup.png" alt="">
-    <div class="popup__content">
-      <h2 class="popup__title">Особлива пропозиція</h2>
-      <p class="popup__text">
-        Осіння колекція ароматів для дому від найкращих парфумерів світу.
-      </p>
-      <button class="button popup__btn">Переглянути</button>
-    </div>
-  </div>
-</div>
-
 <script>
-  // Отримуємо кнопку відкриття попапа та сам попап
-  const openPopupButton = document.getElementById('openPopupButton');
-  const popup = document.getElementById('myPopup');
+  const form = document.querySelector('.register__form');
+  const inputs = form.querySelectorAll('input');
+  const labels = form.querySelectorAll('label');
 
-  // Отримуємо кнопку закриття попапа
-  const closePopupButton = document.getElementById('closePopupButton');
+  inputs.forEach((input, index) => {
+    input.addEventListener('focus', () => {
+      labels[index].style.color = '#2c201d';
+    });
 
-  // Додаємо обробник події для відкриття попапа
-  openPopupButton.addEventListener('click', () => {
-    popup.style.display = 'block';
-  });
-
-  // Додаємо обробник події для закриття попапа
-  closePopupButton.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
-
-  // Додаємо обробник події для закриття попапа при кліку на поза попапом
-  window.addEventListener('click', (event) => {
-    if (event.target === popup) {
-      popup.style.display = 'none';
-    }
+    input.addEventListener('blur', () => {
+      labels[index].style.color = '#aba19d';
+    });
   });
 </script>
- <div id="bestsellers">
-  <div class="container">
-    <ul class="bestsellers">
-      <li class="card"><h2 class="bestsellers__title">Bestsellers</h2></li>
-      <li class="card">
-        <img src="./images/catalog-1.png" alt="">
-        <p>Спрей для текстилю з ароматом Франжипані</p>
-        <span>від 1700₴</span>
-      </li>
-      <li class="card">
-        <img src="./images/catalog-2.png" alt="">
-        <p>Патчі під очі</p>
-        <span>700₴</span>
-      </li>
-      <li class="card">
-        <img src="./images/catalog-3.png" alt="">
-        <p>Гель для душу Франжипані</p>
-        <span>450₴</span>
-      </li>
-      <li class="card">
-        <img src="./images/catalog-4.png" alt="">
-        <p>Скраб для тіла Манго-Папайя</p>
-        <span>450₴</span>
-      </li>
-      <li class="card">
-        <img src="./images/catalog-5.png" alt="">
-        <p>Лосьйон для тіла Абрикос</p>
-        <span>450₴</span>
-      </li>
-      <li class="card">
-        <img src="./images/catalog-6.png" alt="">
-        <p>Сіль для ванни Апельсин-Кориця</p>
-        <span>400₴</span>
-      </li>
-      <li class="card">
-        <a class="bestsellers__link" href="#">Дивитись всі</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-      <div id="face">
-  <div class="container">
-    <div class="face">
-      <div class="face__content">
-        <div class="face__content__wrap">
-          <h2>Догляд за обличчям</h2>
-          <p>
-            Натуральні інгредієнти, найкращі олії та безкомпромісна якість
-            забезпечують вашій шкірі найкращий догляд.
-          </p>
-          <button class="face__btn" type="button">До категорії</button>
-        </div>
-      </div>
-      <div class="face__img">
-        <img src="./images/face.png" alt="">
-        <img src="./images/face-mobile.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
- <div id="textile">
-  <div class="container">
-    <div class="textile">
-      <div class="textile__img">
-        <img src="./images/textile.png" alt="">
-        <img src="./images/textile-mobile.png" alt="">
-      </div>
-      <div class="textile__content">
-        <div class="textile__content__wrap">
-          <h2>Спреї для текстилю</h2>
-          <p>
-            Відкрийте ароматну магію і створюйте освіжаючу атмосферу вдома з
-            нашими ароматами.
-          </p>
-          <button class="textile__btn" type="button">До категорії</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <div id="body">
-  <div class="container">
-    <div class="body">
-      <div class="body__content">
-        <div class="body__content__wrap">
-          <h2>Догляд за тілом</h2>
-          <p>
-            Натуральні інгредієнти, найкращі олії та безкомпромісна якість
-            забезпечують вашій шкірі найкращий догляд.
-          </p>
-          <button class="body__btn" type="button">До категорії</button>
-        </div>
-      </div>
-      <div class="body__img">
-        <img src="./images/body.png" alt="">
-        <img src="./images/body-mobile.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
- <div id="ingredients">
-  <div class="container">
-    <div class="ingredients">
-      <div class="ingredients__title">
-        <h2>Інгредієнти</h2>
-        <p>Ми не використовуємо фарбники, сульфати та інші хімічні домішки.</p>
-      </div>
-      <div class="mySwiper swiper">
-        <div class="ingredients__list swiper-wrapper">
-          <div class="ingredients__card swiper-slide">
-            <img src="./images/ingr-1.png" alt="">
-            <p>Олія авокадо</p>
-          </div>
-          <div class="ingredients__card swiper-slide">
-            <img src="./images/ingr-2.png" alt="">
-            <p>Олія жожоба</p>
-          </div>
-          <div class="ingredients__card swiper-slide">
-            <img src="./images/ingr-3.png" alt="">
-            <p>Пелюстки календули</p>
-          </div>
-          <div class="ingredients__card swiper-slide">
-            <img src="./images/ingr-4.png" alt="">
-            <p>Олія естрагону</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231030011134"></script>
-
-
-<script>
-  var swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides: false,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      1223: {
-        slidesPerView: 4,
-      },
-    },
-  });
-</script>
-
-      <div id="packing">
-  <div class="container">
-    <div class="packing">
-      <div class="packing__img">
-        <img src="./images/packing.png" alt="">
-        <img src="./images/packing-mobile.png" alt="">
-      </div>
-      <div class="packing__content">
-        <div class="packing__content__wrap">
-          <h2>WOW Пакування</h2>
-          <p>
-            При купівлі будь-якої продукції BySadovkiy ви отримуєте фірмовий
-            подарунковий пакет і листівку, яку можна підписати за вашим
-            побажанням.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- <div id="about-us">
-  <div class="container">
-    <ul class="about-us">
-      <li class="about-us__item">
-        <img src="./images/about-1.svg" alt="">
-        <p>100% натуральний склад</p>
-      </li>
-      <li class="about-us__item">
-        <img src="./images/about-2.svg" alt="">
-        <p>Ручна робота всієї продукції</p>
-      </li>
-      <li class="about-us__item">
-        <img src="./images/about-3.svg" alt="">
-        <p>Wow пакування для кожного</p>
-      </li>
-      <li class="about-us__item">
-        <img src="./images/about-4.svg" alt="">
-        <p>Не тестуємо на тваринах</p>
-      </li>
-    </ul>
-  </div>
-</div>
-
-    </main>
+</main>
     <footer id="footer">
   <div class="container">
     <div class="footer">
