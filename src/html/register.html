@@ -1,0 +1,66 @@
+<div id="register">
+  <div class="container">
+    <div class="register">
+      <h2 class="register__title">Реєстрація</h2>
+      <form class="register__form">
+        <div class="register__input">
+          <label for="first-name">Ім’я</label>
+          <input type="text" name="first-name" id="first-name" required />
+        </div>
+        <div class="register__input">
+          <label for="last-name">Прізвище</label>
+          <input type="text" name="last-name" id="last-name" required />
+        </div>
+        <div class="register__input">
+          <label for="date">Дата народження</label>
+          <input type="text" name="date" id="date" required />
+        </div>
+        <div class="register__input">
+          <label for="number">Номер телефону</label>
+          <input type="tel" name="number" id="number" required />
+        </div>
+        <div class="register__input">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="register__input">
+          <label for="password">Пароль</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox1" />
+          <label for="myCheckbox1" class="custom-checkbox"></label>
+          <p>Отримувати листи про новини та знижки</p>
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox2" />
+          <label for="myCheckbox2" class="custom-checkbox"></label>
+          <p>Погоджуюсь з правилами <a href="#">публічної оферти</a></p>
+        </div>
+        <div class="register__checkbox">
+          <input type="checkbox" id="myCheckbox3" />
+          <label for="myCheckbox3" class="custom-checkbox"></label>
+          <p>
+            Погоджуюсь з правилами <a href="#">політики конфіденційності</a>
+          </p>
+        </div>
+        <button class="register__btn button" type="button">Реєстрація</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  const form = document.querySelector('.register__form');
+  const inputs = form.querySelectorAll('input');
+  const labels = form.querySelectorAll('label');
+
+  inputs.forEach((input, index) => {
+    input.addEventListener('focus', () => {
+      labels[index].style.color = '#2c201d';
+    });
+
+    input.addEventListener('blur', () => {
+      labels[index].style.color = '#aba19d';
+    });
+  });
+</script>
