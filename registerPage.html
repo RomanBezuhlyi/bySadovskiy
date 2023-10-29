@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css?_v=20231030011134">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231030012621">
   <title>Project</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231030011134">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?_v=20231030011134">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231030012621">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?_v=20231030012621">
 </head>
 
   <body>
@@ -373,7 +373,10 @@
         </div>
         <div class="register__input">
           <label for="password">Пароль</label>
-          <input type="password" name="password" id="password" required>
+          <div class="password-container">
+            <input type="password" id="password-input-reg">
+            <i class="fa-eye fas toggle-password-reg" onclick="togglePasswordVisibility()"></i>
+          </div>
         </div>
         <div class="register__checkbox">
           <input type="checkbox" id="myCheckbox1">
@@ -411,6 +414,23 @@
       labels[index].style.color = '#aba19d';
     });
   });
+
+  // ============================================
+
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password-input-reg');
+    var togglePassword = document.querySelector('.toggle-password-reg');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      togglePassword.classList.remove('fa-eye');
+      togglePassword.classList.add('fa-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      togglePassword.classList.remove('fa-eye-slash');
+      togglePassword.classList.add('fa-eye');
+    }
+  }
 </script>
 </main>
     <footer id="footer">
