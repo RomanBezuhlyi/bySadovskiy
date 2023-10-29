@@ -1,17 +1,13 @@
 <!doctype html>
 <html lang="ru">
   <head>
-  <style>
-    .loaded {
-      opacity: 1;
-    }
-  </style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css?_v=20231028114139">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231030000928">
   <title>Project</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231028114139">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231030000928">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?_v=20231030000928">
 </head>
 
   <body>
@@ -57,7 +53,7 @@
             </ul>
           </div>
         </li>
-        <li>
+        <li class="btn-login">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
             <path d="M12.3984 2.5C6.87544 2.5 2.39844 6.977 2.39844 12.5C2.39844 18.023 6.87544 22.5 12.3984 22.5C17.9214 22.5 22.3984 18.023 22.3984 12.5C22.3984 6.977 17.9214 2.5 12.3984 2.5Z" stroke="#2C201D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M4.66992 18.846C4.66992 18.846 6.89892 16 12.3989 16C17.8989 16 20.1289 18.846 20.1289 18.846M12.3989 12.5C13.1946 12.5 13.9576 12.1839 14.5202 11.6213C15.0829 11.0587 15.3989 10.2956 15.3989 9.5C15.3989 8.70435 15.0829 7.94129 14.5202 7.37868C13.9576 6.81607 13.1946 6.5 12.3989 6.5C11.6033 6.5 10.8402 6.81607 10.2776 7.37868C9.71499 7.94129 9.39892 8.70435 9.39892 9.5C9.39892 10.2956 9.71499 11.0587 10.2776 11.6213C10.8402 12.1839 11.6033 12.5 12.3989 12.5Z" stroke="#2C201D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -150,7 +146,67 @@
     </div>
   </div>
 </div>
+<div class="login-overlay" style="display: none">
+  <div class="login">
+    <button type="button" class="login__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M17.6579 7.75535L13.4153 11.998L17.6579 16.2406L16.2437 17.6548L12.0011 13.4122L7.75842 17.6548L6.3442 16.2406L10.5868 11.998L6.3442 7.75535L7.75842 6.34113L12.0011 10.5838L16.2437 6.34113L17.6579 7.75535Z" fill="#2C201D"/>
+      </svg>
+    </button>
+    <h4 class="login__title">Вхід до особистого кабінету</h4>
+    <form class="login__form">
+      <label class="login__label">E-mail</label>
+      <input class="login__input email" type="email">
+      <label class="login__label">Пароль</label>
+      <div class="password-container">
+        <input class="login__input" type="password" id="password-input">
+        <i class="fa-eye fas toggle-password" onclick="togglePasswordVisibility()"></i>
+      </div>
+      <button class="button login__btn" type="submit">Увійти</button>
+    </form>
+    <div class="login__links">
+      <a class="login__link" href="#">Забули пароль?</a>
+      <a class="login__link" href="#">Реєстрація</a>
+    </div>
+  </div>
+</div>
+
 <script>
+  const btnLogin = document.querySelector('.btn-login');
+  const login = document.querySelector('.login-overlay');
+  const btnLoginClose = document.querySelector('.login__close');
+
+  btnLogin.addEventListener('click', () => {
+    if (login.style.display === 'none') {
+      login.style.display = 'block';
+      document.querySelector('body').style.overflow = 'hidden';
+    } else {
+      login.style.display = 'none';
+      document.querySelector('body').style.overflow = 'auto';
+    }
+  });
+
+  btnLoginClose.addEventListener('click', () => {
+    login.style.display = 'none';
+    document.querySelector('body').style.overflow = 'auto';
+  });
+
+  // ===========================
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password-input');
+    var togglePassword = document.querySelector('.toggle-password');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      togglePassword.classList.remove('fa-eye');
+      togglePassword.classList.add('fa-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      togglePassword.classList.remove('fa-eye-slash');
+      togglePassword.classList.add('fa-eye');
+    }
+  }
+  // ===========================
   // Отримуємо посилання на кнопку бургер, меню та іконку закриття
   const burgerButton = document.querySelector('.burger');
   const menu = document.querySelector('.menu');
@@ -651,7 +707,7 @@
     </div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231028114139"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231030000928"></script>
 <script>
   var swiper = new Swiper('.mySwiper', {
     navigation: {
