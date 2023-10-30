@@ -241,6 +241,7 @@
 
 .login {
   position: absolute;
+  z-index: 20;
   top: 82px;
   right: 54px;
   @include flex(column, center, center);

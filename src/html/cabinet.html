@@ -1,0 +1,183 @@
+<div id="cabinet">
+  <div class="container">
+    <div class="cabinet__title">
+      <h2>Особистий Кабінет</h2>
+    </div>
+    <div class="cabinet">
+      <ul class="cabinet__sidebar">
+        <li class="cabinet__sidebar-item active">
+          <a href="#">Контактна інформація</a>
+        </li>
+        <li class="cabinet__sidebar-item"><a href="#">Адресна книга</a></li>
+        <li class="cabinet__sidebar-item"><a href="#">Історія замовлень</a></li>
+        <li class="cabinet__sidebar-item"><a href="#">Обране</a></li>
+        <li class="cabinet__sidebar-item logout"><a href="#">Вихід</a></li>
+      </ul>
+      <form class="cabinet__form">
+        <ul class="cabinet__form-list">
+          <li class="cabinet__form-item">
+            <label for="first-name">Ваше ім’я</label>
+            <input type="text" name="first-name" />
+          </li>
+          <li class="cabinet__form-item">
+            <label for="last-name">Прізвище</label>
+            <input type="text" name="last-name" />
+          </li>
+          <li class="cabinet__form-item">
+            <label for="email">E-mail / Логін</label>
+            <input type="email" name="email" />
+          </li>
+          <li class="cabinet__form-item">
+            <label for="date">Дата народження</label>
+            <input type="text" name="date" />
+          </li>
+          <li class="cabinet__form-item">
+            <label for="number">Номер телефону</label>
+            <input type="text" name="number" />
+          </li>
+        </ul>
+        <ul class="cabinet__form-list">
+          <li class="cabinet__form-item">
+            <label for="old-pass">Старий пароль</label>
+            <div class="password-container">
+              <input type="password" id="password-input-reg" />
+              <i
+                class="toggle-password-reg fas fa-eye"
+                onclick="togglePasswordVisibility()"
+              ></i>
+            </div>
+          </li>
+          <li class="cabinet__form-item">
+            <label class="label-pass" for="new-pass">Новий пароль</label>
+            <input type="password" name="new-pass" />
+          </li>
+          <li class="cabinet__form-item">
+            <label class="label-pass" for="repeat-pass"
+              >Підтвердження пароля</label
+            >
+            <input type="password" name="repeat-pass" />
+          </li>
+          <li class="cabinet__form-item cabinet__form-item-btn">
+            <button class="cabinet__form-btn button">Зберегти</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <ul class="mobile-cabinet">
+      <li class="mobile-cabinet__item">
+        <div class="mobile-cabinet__item-top">
+          <p>Контактна інформація</p>
+          <button class="arrow-open">
+            <img src="./images/arr-top.svg" alt="" />
+          </button>
+        </div>
+        <div class="mobile-cabinet__item-bottom">
+          <form class="mobile-cabinet__form">
+            <ul class="mobile-cabinet__form-list">
+              <li class="mobile-cabinet__form-item">
+                <label for="first-name">Ваше ім’я</label>
+                <input type="text" name="first-name" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label for="last-name">Прізвище</label>
+                <input type="text" name="last-name" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label for="email">E-mail / Логін</label>
+                <input type="email" name="email" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label for="date">Дата народження</label>
+                <input type="text" name="date" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label for="number">Номер телефону</label>
+                <input type="text" name="number" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label for="old-pass">Старий пароль</label>
+                <div class="password-container">
+                  <input type="password" id="password-input-reg" />
+                  <i
+                    class="toggle-password-reg fas fa-eye"
+                    onclick="togglePasswordVisibility()"
+                  ></i>
+                </div>
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label class="label-pass" for="new-pass">Новий пароль</label>
+                <input type="password" name="new-pass" />
+              </li>
+              <li class="mobile-cabinet__form-item">
+                <label class="label-pass" for="repeat-pass"
+                  >Підтвердження пароля</label
+                >
+                <input type="password" name="repeat-pass" />
+              </li>
+              <li
+                class="mobile-cabinet__form-item mobile-cabinet__form-item-btn"
+              >
+                <button class="mobile-cabinet__form-btn button">
+                  Зберегти
+                </button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </li>
+      <li class="mobile-cabinet__item">
+        <div class="mobile-cabinet__item-top">
+          <p>Адресна книга</p>
+          <button><img src="./images/arr-top.svg" alt="" /></button>
+        </div>
+        <div class="mobile-cabinet__item-bottom"></div>
+      </li>
+      <li class="mobile-cabinet__item">
+        <div class="mobile-cabinet__item-top">
+          <p>Історія замовлень</p>
+          <button><img src="./images/arr-top.svg" alt="" /></button>
+        </div>
+        <div class="mobile-cabinet__item-bottom"></div>
+      </li>
+      <li class="mobile-cabinet__item">
+        <div class="mobile-cabinet__item-top">
+          <p>Обране</p>
+          <button><img src="./images/arr-top.svg" alt="" /></button>
+        </div>
+        <div class="mobile-cabinet__item-bottom"></div>
+      </li>
+      <li class="mobile-cabinet__item">
+        <div class="mobile-cabinet__item-top"><p>Вихід</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password-input-reg');
+    var togglePassword = document.querySelector('.toggle-password-reg');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      togglePassword.classList.remove('fa-eye');
+      togglePassword.classList.add('fa-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      togglePassword.classList.remove('fa-eye-slash');
+      togglePassword.classList.add('fa-eye');
+    }
+  }
+  // =====================================================
+  const arrOpen = document.querySelector('.arrow-open');
+  const itemBottom = document.querySelector('.mobile-cabinet__item-bottom');
+
+  arrOpen.addEventListener('click', () => {
+    if (itemBottom.style.height === '0px' || itemBottom.style.height === '') {
+      itemBottom.style.height = 'auto';
+      arrOpen.style.transform = 'rotate(180deg)';
+    } else {
+      itemBottom.style.height = '0';
+      arrOpen.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
