@@ -344,10 +344,11 @@
 
 .popup-filter {
   overflow: hidden;
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -355,12 +356,13 @@
   z-index: 999;
   background: rgba(44, 32, 29, 0.3);
   backdrop-filter: blur(2px);
+  @include transition;
 }
 
 .popup-filter-content {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   background-color: $bg;
   border-top: 1px solid $stroke;
   border-bottom: 1px solid $stroke;
@@ -368,6 +370,7 @@
   width: 384px;
   height: 100%;
   padding: 100px 30px;
+  transition: 0.5s all;
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;

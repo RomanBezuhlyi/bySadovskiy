@@ -51,6 +51,7 @@
         <li class="label-menu">Меню</li>
         <li class="search">
           <svg
+            class="search__svg"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
@@ -65,6 +66,9 @@
               stroke-linejoin="round"
             />
           </svg>
+          <div class="search__input-wrap">
+            <input type="text" class="search__input" placeholder="Пошук" />
+          </div>
         </li>
       </ul>
       <div class="header__logo">
@@ -121,7 +125,7 @@
             />
           </svg>
         </li>
-        <li>
+        <li class="btn-basket">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -305,8 +309,171 @@
     </div>
   </div>
 </div>
-
+<div class="popup-basket" id="popupBasket">
+  <div class="popup-basket-content">
+    <div class="basket-top">
+      <h3>Кошик</h3>
+      <div class="reset">
+        <button class="reset-button">Очистити кошик</button>
+        <button class="close-button-basket" id="closePopupBasket" type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="45"
+            height="45"
+            viewBox="0 0 45 45"
+            fill="none"
+          >
+            <path
+              d="M33.1057 14.5413L25.1507 22.4962L33.1057 30.4512L30.454 33.1028L22.4991 25.1479L14.5441 33.1028L11.8925 30.4512L19.8474 22.4962L11.8925 14.5413L14.5441 11.8896L22.4991 19.8446L30.454 11.8896L33.1057 14.5413Z"
+              fill="#2C201D"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <ul class="basket__list">
+      <li class="basket__item">
+        <img src="./images/basket.png" alt="" />
+        <div class="info">
+          <div class="info__top">
+            <div class="info__top__left">
+              <p>Лосьйон для тіла Абрикос</p>
+              <span>165ml</span>
+            </div>
+            <div class="info__top__right">
+              <button onclick="decreaseQuantity(this)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                >
+                  <path
+                    d="M23 17.7377H17H15H9V15.7377H15L17 15.7377L23 15.7377V17.7377Z"
+                    fill="#2C201D"
+                  />
+                </svg>
+              </button>
+              <span>1</span>
+              <button onclick="increaseQuantity(this)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                >
+                  <path
+                    d="M23 17.7377H17V23.7377H15V17.7377H9V15.7377H15V9.73767H17V15.7377H23V17.7377Z"
+                    fill="#2C201D"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="info__bottom">
+            <p>450₴</p>
+          </div>
+          <button class="delete">Видалити</button>
+        </div>
+      </li>
+      <li class="basket__item">
+        <img src="./images/basket.png" alt="" />
+        <div class="info">
+          <div class="info__top">
+            <div class="info__top__left">
+              <p>Лосьйон для тіла Абрикос</p>
+              <span>165ml</span>
+            </div>
+            <div class="info__top__right">
+              <button onclick="decreaseQuantity(this)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                >
+                  <path
+                    d="M23 17.7377H17H15H9V15.7377H15L17 15.7377L23 15.7377V17.7377Z"
+                    fill="#2C201D"
+                  />
+                </svg>
+              </button>
+              <span>1</span>
+              <button onclick="increaseQuantity(this)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                >
+                  <path
+                    d="M23 17.7377H17V23.7377H15V17.7377H9V15.7377H15V9.73767H17V15.7377H23V17.7377Z"
+                    fill="#2C201D"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="info__bottom">
+            <p>450₴</p>
+          </div>
+          <button class="delete">Видалити</button>
+        </div>
+      </li>
+    </ul>
+    <div class="basket__plus">
+      <form class="basket-select">
+        <label class="custom-radio">
+          <input type="radio" name="option" value="варіант1" />
+          <span class="radio-circle"></span>Подарункове пакування</label
+        >
+      </form>
+      <form class="basket-select">
+        <label class="custom-radio">
+          <input type="radio" name="option" value="варіант3" />
+          <span class="radio-circle"></span>Листівка</label
+        >
+      </form>
+      <textarea
+        class="basket__textarea"
+        placeholder="Введіть текст для листівки"
+        id="textarea"
+        style="display: none"
+      ></textarea>
+    </div>
+    <div class="basket__total">
+      <div class="basket__total-info">
+        <div class="left">
+          <p>Всього:</p>
+          <p>Безкоштовна доставка від 2500₴</p>
+        </div>
+        <div class="right">
+          <p>1800₴</p>
+        </div>
+      </div>
+    </div>
+    <div class="basket__btn">
+      <button class="button">Оформити замовлення</button>
+      <a href="#">Продовжити покупку</a>
+    </div>
+    <div class="basket__plug">
+      <p>Ваш кошик порожній</p>
+      <a href="#">Продовжити покупки</a>
+    </div>
+  </div>
+</div>
 <script>
+  const search = document.querySelector('.search__input-wrap');
+  const searchSvg = document.querySelector('.search__svg');
+
+  searchSvg.addEventListener('click', () => {
+    search.classList.toggle('active');
+  });
+
   // =================================
   const btnLogin = document.querySelector('.login__btn');
 
@@ -486,5 +653,54 @@
         toggleList.classList.remove('active'); // Видаліть клас "active" для зміни іконки
       }
     });
+  });
+
+  //   ====================================
+
+  // Функція для блокування скролінгу сторінки
+  function disableScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Функція для розблокування скролінгу сторінки
+  function enableScroll() {
+    document.body.style.overflow = 'auto';
+  }
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupButtonMain = document.querySelector('.btn-basket');
+  const popupMain = document.getElementById('popupBasket');
+  const popupBasketMain = document.querySelector('.popup-basket-content');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupButtonMain = document.getElementById('closePopupBasket');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupButtonMain.addEventListener('click', () => {
+    popupMain.style.opacity = '1';
+    popupMain.style.pointerEvents = 'all';
+    popupBasketMain.style.right = '0';
+    popupMain.classList.add('open');
+    disableScroll(); // Блокуємо скролінг
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupButtonMain.addEventListener('click', () => {
+    popupMain.style.opacity = '0';
+    popupMain.style.pointerEvents = 'none';
+    popupBasketMain.style.right = '-100%';
+    popupMain.classList.remove('open');
+    enableScroll(); // Розблоковуємо скролінг
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popupMain.style.opacity = '0';
+      popupMain.style.pointerEvents = 'none';
+      popupBasketMain.style.right = '-100%';
+      popupMain.classList.remove('open');
+      enableScroll(); // Розблоковуємо скролінг
+    }
   });
 </script>
